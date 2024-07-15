@@ -1,0 +1,6 @@
+typer
+typer_config
+numpy
+transformers
+gluonts
+accelerate
