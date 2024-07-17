@@ -2,7 +2,7 @@ import warnings
 from dataclasses import dataclass
 from typing import Any, Dict, List, Literal, Optional, Tuple, Union
 
-import chronos
+import chronos.chronos as chronos
 import torch
 import torch.nn as nn
 from transformers import (

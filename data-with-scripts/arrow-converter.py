@@ -2,7 +2,6 @@ from pathlib import Path
 from typing import List, Optional, Union
 
 import numpy as np
-import pandas as pd
 from gluonts.dataset.arrow import ArrowWriter
 
 
@@ -29,9 +28,7 @@ def convert_to_arrow(
 
 if __name__ == "__main__":
     # Generate 20 random time series of length 1024
-
-    df = pd.read_csv('data-with-scripts/data/bitcoin-prices.csv')
-    time_series = [df['Price'].values]
+    time_series = {}
 
     # Convert to GluonTS arrow format
-    convert_to_arrow("data-with-scripts/data/bitcoin-prices.arrow", time_series=time_series)
+    convert_to_arrow("data-with-scripts/data//noise-data.arrow", time_series=time_series)

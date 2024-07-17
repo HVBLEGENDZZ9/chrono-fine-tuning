@@ -41,7 +41,7 @@ from gluonts.transform import (
     LastValueImputation,
 )
 
-from src.chronos import ChronosConfig, ChronosTokenizer
+from chronos import ChronosConfig, ChronosTokenizer
 
 
 app = typer.Typer(pretty_exceptions_enable=False)
@@ -659,7 +659,7 @@ def main(
         max_steps=max_steps,
         gradient_accumulation_steps=gradient_accumulation_steps,
         dataloader_num_workers=dataloader_num_workers,
-        tf32=tf32,  # remove this if not using Ampere GPUs (e.g., A100)
+        # tf32=tf32,  # remove this if not using Ampere GPUs (e.g., A100)
         torch_compile=torch_compile,
         ddp_find_unused_parameters=False,
         remove_unused_columns=False,
